@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let response = await fetch ('http://localhost:3000/dogs')
         let dogs = await response.json()
         dogs.forEach(dog => {
-            console.log(dog)
             let dogRow = document.createElement("tr")
 
             let nameCell = document.createElement("td")
@@ -39,8 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             editCell.appendChild(editButton)
             dogRow.appendChild(editCell)
-
-
             dogTable.appendChild(dogRow)
         })
 
